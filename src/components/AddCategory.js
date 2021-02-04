@@ -8,16 +8,16 @@ export const AddCategory = ( { setCategories } ) => {
     const handleInputChange = (e) => {
         //console.log(e.target.value);
         setInputValue( e.target.value );
-
-        console.log('handleInputChange invocado');
+        //console.log('handleInputChange invocado');
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        //console.log('asd')
+        //console.log('handleSubmit invocado', inputValue)
         
         if( inputValue.trim().length > 2 ) {
             setCategories( (cats) => [inputValue, ...cats] );
+            setInputValue('');
         }
         
     }
