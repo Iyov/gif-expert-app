@@ -8,6 +8,8 @@ export const AddCategory = ( { setCategories } ) => {
     const handleInputChange = (e) => {
         //console.log(e.target.value);
         setInputValue( e.target.value );
+
+        console.log('handleInputChange invocado');
     }
 
     const handleSubmit = (e) => {
@@ -26,6 +28,7 @@ export const AddCategory = ( { setCategories } ) => {
                 type="text"
                 value={ inputValue }
                 onChange={ handleInputChange }
+                placeholder="Ingresa un texto para buscar sus gifs"
             />
         </form> 
     )
